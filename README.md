@@ -22,9 +22,12 @@ C++ files are checked using g++ -fsyntax-only, while Python files are checked us
 First, find the USB serial connection that your Arduino is using:
 
 ```bash
-dmesg | grep tty
+ls /dev/ttyUSB* 
 ```
-
+or 
+```bash
+/dev/ttyACM* 
+```
 Look for the Arduino's serial device, such as:
 
 ```text
